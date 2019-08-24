@@ -11,10 +11,11 @@ gulp.task('serve', function() {
     }
   });
 
-  gulp.watch("./*.scss", gulp.series('sass'));
+  gulp.watch("./**/*.scss", gulp.series('sass'));
+  gulp.watch("./*").on('change', browserSync.reload);
   gulp.watch("./*.less", gulp.series('less'));
   gulp.watch("./*.styl", gulp.series('stylus'));
-  gulp.watch("./*").on('change', browserSync.reload);
+
 });
 
 // Compile sass into CSS & auto-inject into browsers

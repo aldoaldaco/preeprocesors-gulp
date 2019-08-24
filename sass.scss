@@ -1,6 +1,6 @@
 /*Variables*/
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
-$color: blue;
+$color: red;
 $background: gray;
 $font: 'Roboto', sans-serif;
 $size: 200px;
@@ -11,6 +11,7 @@ body {
   font-family: $font;
   text-align: center;
   margin: 0;
+  color: red;
 }
 .post {
   width: 100%;
@@ -21,7 +22,7 @@ body {
   flex-flow: wrap;
   justify-content: center;
   align-items: center;
-  &-contenedor {
+  &-contenedor {//.post-contenedor
     width: 300px;
     height: $size;
     margin: 10px;

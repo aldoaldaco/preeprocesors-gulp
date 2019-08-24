@@ -1,7 +1,9 @@
 /*Mixins*/
-@mixin clas($label) {
-  .col-#{$label} {
-    background-color: #4b94f9;
+@mixin class($label) {
+  @for $i from 1 through 12 {
+    .col-#{$label}-#{$i} {
+      background-color: red;
+    }
   }
 }
 @mixin shadow($color) {
@@ -18,7 +20,6 @@
   align-items: center;
   background: $color;
   color: $background;
-  @include clas($label);
   input {
     width: 300px;
     @include shadow($background);
@@ -38,3 +39,7 @@
     }
   }
 }
+
+@include class(sm);
+@include class(md);
+@include class(lg);
