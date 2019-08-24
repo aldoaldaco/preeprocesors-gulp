@@ -1,0 +1,34 @@
+/*Mixins*/
+.shadow(@color) {
+  -moz-box-shadow:    0 0 3px 4px @color;
+  -webkit-box-shadow: 0 0 3px 4px @color;
+  box-shadow:         0 0 3px 4px @color;
+}
+.post-text {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background: @color;
+  color: @background;
+  input {
+    width: 300px;
+    .shadow(@background);
+  }
+  textarea {
+    width: 300px;
+    height: 80px;
+    .shadow(@background);
+  }
+  button {
+    width: 100px;
+    height: 54px;
+    &:hover {
+      background: @color;
+      color: white;
+      cursor: pointer;
+    }
+  }
+}

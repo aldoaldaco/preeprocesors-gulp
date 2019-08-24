@@ -1,0 +1,37 @@
+/*Variables*/
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+$color = red
+$background = white
+$font = 'Roboto', sans-serif
+$size = 300px
+$label = body
+/*Nesting*/
+body
+  font-family: $font
+  text-align: center
+  margin: 0
+
+.post
+  width: 100%
+  max-height: 500px
+  overflow-y: auto
+  display: flex
+  flex-direction: row;
+  flex-flow: wrap;
+  justify-content: center;
+  align-items: center
+  &-contenedor
+    width: 300px;
+    height: $size
+    margin: 10px
+    border-radius: 5px
+    color: $color
+    background: $background
+    &-header
+      background: red
+
+    &-body
+      overflow-y: scroll
+
+/*Partials/Imports*/
+@import 'partials/_partial.styl';

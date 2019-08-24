@@ -1,0 +1,46 @@
+/*Variables*/
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+$color: blue;
+$background: gray;
+$font: 'Roboto', sans-serif;
+$size: 200px;
+$label: body;
+@debug $font;
+/*Nesting*/
+body {
+  font-family: $font;
+  text-align: center;
+  margin: 0;
+}
+.post {
+  width: 100%;
+  max-height: 500px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: row;
+  flex-flow: wrap;
+  justify-content: center;
+  align-items: center;
+  &-contenedor {
+    width: 300px;
+    height: $size;
+    margin: 10px;
+    border-radius: 5px;
+    color: $color;
+    background: $background;
+    &-header {
+      background: red;
+    }
+    &-body {
+      overflow-y: scroll;
+    }
+  }
+  @extend %shared-styles;
+}
+/*Partials/Imports*/
+@import 'partials/partial';
+/*Extends/Inheritance*/
+%shared-styles {
+  border: 1px solid #ccc;
+  color: #333;
+}
